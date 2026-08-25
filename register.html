@@ -1,11 +1,22 @@
 <!doctype html>
 <html lang="de">
 <head>
+<script>
+(function(){
+  try {
+    var u = new URL(window.location.href);
+    if (u.searchParams.get("build") !== "23") {
+      u.searchParams.set("build","23");
+      window.location.replace(u.toString());
+    }
+  } catch(e) {}
+})();
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Registrieren | KRAFTWERK AUTO</title>
-<link rel="stylesheet" href="css/style-v22.css">
-  <meta name="build-version" content="v22.0">
+<link rel="stylesheet" href="css/style-v23.css">
+  <meta name="build-version" content="v23.0">
 </head>
 <body>
 
@@ -34,5 +45,5 @@
   <div><strong>KRAFTWERK AUTO</strong><div>Fiktiver Autoservice · Deutschland · © 2026</div></div>
   <div><a href="leistungen.html">Leistungen</a> · <a href="preise.html">Preise</a> · <a href="kontakt.html">Kontakt</a></div>
 </div></footer>
-<script src="js/app-v22.js"></script>
+<script src="js/app-v23.js"></script>
 </body></html>

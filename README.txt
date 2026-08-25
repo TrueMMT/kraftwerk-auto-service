@@ -1,7 +1,13 @@
-KRAFTWERK AUTO v22
-- Fixed the actual car image asset, not only CSS.
-- Dark/grey rectangular background around the car was converted to transparency.
-- Edge fade baked into PNG so no rectangle can appear.
-- Hero copy has no background panels.
-- Fresh filenames prevent stale cache.
-Upload the CONTENTS of this ZIP to repository root.
+KRAFTWERK AUTO v23 - AUTOMATIC CACHE FIX
+
+What changed:
+- No visual redesign.
+- First page open automatically adds ?build=23 to the URL.
+- This forces Chrome/GitHub Pages to fetch the current HTML instead of a stale cached document.
+- Existing query parameters such as utm_source are preserved.
+- Internal navigation carries build=23 automatically.
+- CSS, JS and car image use fresh v23 filenames.
+
+IMPORTANT:
+Upload ALL contents of this ZIP to the repository root.
+After v23 has been uploaded, normal visitors should not need Ctrl+F5.
