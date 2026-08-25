@@ -26,3 +26,10 @@ V11:
 - Existing car made visually more aggressive through crop/contrast/saturation (no new image generated).
 - Animated red sparks, glow and road/light streak effects added with CSS/JS.
 - Effects extend behind the hero text.
+
+V12:
+- Only the hero car was changed.
+- Replaced Porsche/Panamera hero with a different existing sports-car asset.
+- No new image was generated.
+- Transparent fade was baked into the PNG so there is no visible rectangular frame.
+- Existing site layout, header, effects and subpages were left unchanged.

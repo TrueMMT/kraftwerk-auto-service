@@ -600,3 +600,73 @@ header .container{
   100%{transform:translate3d(130px,-260px,0) rotate(38deg) scale(1.15);opacity:0}
 }
 @media(prefers-reduced-motion:reduce){.spark-layer{display:none}}
+
+
+/* =========================================================
+   v12 — CAR ONLY FIX
+   ========================================================= */
+
+/* Remove every previous image/background layer from the car zone. */
+.hero-media{
+  background:none !important;
+  border:0 !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+}
+.hero-media:after{
+  display:none !important;
+}
+
+/* Completely different existing sports-car asset, with transparent faded edges.
+   No rectangular frame is possible because the PNG itself fades to transparent. */
+.hero-media:before{
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  z-index:3 !important;
+  top:-30px !important;
+  right:-155px !important;
+  bottom:-35px !important;
+  left:-115px !important;
+
+  background-image:url("../assets/sports-car-v12.png") !important;
+  background-repeat:no-repeat !important;
+  background-position:center center !important;
+  background-size:contain !important;
+
+  filter:
+    contrast(1.08)
+    saturate(1.08)
+    brightness(.98)
+    drop-shadow(0 24px 28px rgba(0,0,0,.58))
+    drop-shadow(0 0 22px rgba(255,55,15,.20)) !important;
+
+  -webkit-mask-image:none !important;
+  mask-image:none !important;
+}
+
+/* Keep the existing animated background visible around/behind the car. */
+.hero-grid{
+  overflow:visible !important;
+}
+.hero-media{
+  isolation:isolate;
+}
+
+/* At desktop size, give the new sports car slightly more presence. */
+@media(min-width:1200px){
+  .hero-media:before{
+    transform:scale(1.10) translateX(-8px) !important;
+    transform-origin:center;
+  }
+}
+
+@media(max-width:1000px){
+  .hero-media:before{
+    top:-35px !important;
+    right:-65px !important;
+    bottom:-35px !important;
+    left:-65px !important;
+    transform:scale(1.02) !important;
+  }
+}
