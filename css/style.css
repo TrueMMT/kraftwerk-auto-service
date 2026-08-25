@@ -24,10 +24,22 @@ body{
 body:before{
   content:"";
   position:fixed;inset:0;pointer-events:none;z-index:-1;
-  background-image:
-    radial-gradient(circle,rgba(255,74,31,.32) 1px,transparent 1px);
-  background-size:180px 180px;
-  opacity:.22
+  background:
+    radial-gradient(circle at 8% 28%,rgba(255,58,20,.30) 0 2px,transparent 3px),
+    radial-gradient(circle at 82% 18%,rgba(255,75,25,.38) 0 2px,transparent 3px),
+    radial-gradient(circle at 62% 72%,rgba(255,45,10,.30) 0 1.5px,transparent 3px),
+    radial-gradient(ellipse at 92% 45%,rgba(255,50,15,.17),transparent 30%),
+    radial-gradient(ellipse at 10% 72%,rgba(255,65,20,.13),transparent 28%);
+  background-size:135px 135px,190px 190px,155px 155px,100% 100%,100% 100%;
+  opacity:.95
+}
+body:after{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:
+    linear-gradient(118deg,transparent 0 67%,rgba(255,61,20,.12) 67.15%,transparent 67.35%),
+    linear-gradient(153deg,transparent 0 80%,rgba(255,61,20,.10) 80.15%,transparent 80.35%);
+  filter:drop-shadow(0 0 8px rgba(255,61,20,.5))
 }
 a{text-decoration:none;color:inherit}
 .container{width:min(1280px,calc(100% - 40px));margin:auto}
@@ -36,17 +48,17 @@ header{
   display:flex;align-items:center;
   border-bottom:1px solid rgba(255,255,255,.03)
 }
-.nav{display:flex;align-items:center;width:100%;gap:28px}
-.brand{display:flex;align-items:center;gap:14px;margin-right:auto;font-weight:1000;letter-spacing:3px;font-size:25px}
-.brand-badge{width:48px;height:48px;border-radius:10px;background:var(--accent);display:grid;place-items:center;font-size:23px;font-weight:1000;box-shadow:0 12px 28px rgba(255,74,31,.25)}
+.nav{display:flex;align-items:center;width:100%;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto;font-weight:1000;letter-spacing:2.2px;font-size:21px;white-space:nowrap}
+.brand-badge{width:40px;height:40px;border-radius:9px;background:var(--accent);display:grid;place-items:center;font-size:20px;font-weight:1000;box-shadow:0 10px 24px rgba(255,74,31,.30)}
 .brand .auto{color:var(--accent)}
-.menu{display:flex;align-items:center;gap:36px}
+.menu{display:flex;align-items:center;gap:30px;margin-left:auto}
 .menu a{position:relative;padding:42px 0;color:#dedede;font-size:15px;font-weight:800}
 .menu a:hover,.menu a.active{color:#fff}
 .menu a.active:after{
   content:"";position:absolute;left:0;right:0;bottom:23px;height:2px;background:var(--accent)
 }
-.actions{display:flex;gap:12px;margin-left:18px}
+.actions{display:flex;gap:10px;margin-left:8px;flex:0 0 auto}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:9px;
   border:1px solid #344047;background:#0c1114;color:white;
@@ -75,21 +87,34 @@ header{
 .checks{display:flex;gap:30px;flex-wrap:wrap;color:#c5c8ca;font-size:14px}
 .checks b{color:var(--accent)}
 .hero-media{
-  position:relative;height:510px;border-radius:0;
-  overflow:hidden;background:#050708;
-  box-shadow:0 28px 70px rgba(0,0,0,.38);
+  position:relative;
+  height:510px;
+  overflow:visible;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
 }
 .hero-media:before{
-  content:"";position:absolute;inset:0;
+  content:"";
+  position:absolute;
+  inset:-35px -70px -35px -55px;
   background-image:url("../assets/porsche-hero.png");
-  background-size:cover;background-position:73% center;background-repeat:no-repeat;
-  transform:scale(1.02);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  filter:saturate(1.08) contrast(1.06);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.42) 14%,#000 34%,#000 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.42) 14%,#000 34%,#000 100%);
 }
 .hero-media:after{
-  content:"";position:absolute;inset:0;
+  content:"";
+  position:absolute;
+  inset:-35px -70px -35px -55px;
+  pointer-events:none;
   background:
-    linear-gradient(90deg,#050708 0%,rgba(5,7,8,.95) 10%,rgba(5,7,8,.55) 28%,rgba(5,7,8,.06) 55%,rgba(5,7,8,.04) 100%),
-    linear-gradient(180deg,rgba(0,0,0,.02) 45%,rgba(0,0,0,.4) 100%);
+    radial-gradient(circle at 72% 42%,rgba(255,55,15,.18),transparent 35%),
+    linear-gradient(90deg,#050708 0%,rgba(5,7,8,.72) 12%,transparent 36%);
 }
 .stats{
   display:grid;grid-template-columns:repeat(4,1fr);
