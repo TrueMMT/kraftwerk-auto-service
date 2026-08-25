@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420">
+ <defs>
+  <linearGradient id="body" x1="0" x2="1"><stop stop-color="#e5e7eb"/><stop offset=".45" stop-color="#9ca3af"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+  <linearGradient id="glass" x1="0" x2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#334155"/></linearGradient>
+  <filter id="shadow"><feGaussianBlur stdDeviation="14"/></filter>
+ </defs>
+ <ellipse cx="470" cy="350" rx="330" ry="32" fill="#000" opacity=".35" filter="url(#shadow)"/>
+ <path d="M130 280c20-55 52-92 103-118 53-28 126-47 208-49 71-2 130 6 175 24 46 18 88 52 126 100l86 17c28 6 48 27 49 54l1 34H102l5-34c3-14 10-23 23-28z" fill="url(#body)" stroke="#cbd5e1" stroke-width="4"/>
+ <path d="M278 166c46-24 102-36 164-38 61-1 111 6 151 23 26 11 54 31 82 60H252c8-19 17-34 26-45z" fill="url(#glass)"/>
+ <path d="M453 128v83" stroke="#94a3b8" stroke-width="5"/>
+ <path d="M683 214l-431-1" stroke="#fff" stroke-width="3" opacity=".45"/>
+ <rect x="739" y="262" width="89" height="22" rx="10" fill="#fb923c"/>
+ <rect x="113" y="264" width="72" height="19" rx="9" fill="#f8fafc" opacity=".85"/>
+ <circle cx="258" cy="333" r="66" fill="#111827" stroke="#374151" stroke-width="8"/>
+ <circle cx="258" cy="333" r="34" fill="#9ca3af"/><circle cx="258" cy="333" r="13" fill="#111827"/>
+ <circle cx="704" cy="333" r="66" fill="#111827" stroke="#374151" stroke-width="8"/>
+ <circle cx="704" cy="333" r="34" fill="#9ca3af"/><circle cx="704" cy="333" r="13" fill="#111827"/>
+ <path d="M403 267h124" stroke="#64748b" stroke-width="5" stroke-linecap="round"/>
+</svg>

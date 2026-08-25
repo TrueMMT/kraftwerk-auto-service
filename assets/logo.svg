@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#f97316"/><stop offset="1" stop-color="#facc15"/></linearGradient></defs>
+  <rect width="64" height="64" rx="16" fill="#111827"/>
+  <path d="M14 39h8l6-15h10l6 15h7l-3 8H17z" fill="url(#g)"/>
+  <circle cx="25" cy="45" r="5" fill="#030712" stroke="#fff" stroke-width="2"/>
+  <circle cx="43" cy="45" r="5" fill="#030712" stroke="#fff" stroke-width="2"/>
+  <text x="76" y="29" font-family="Arial,sans-serif" font-size="20" font-weight="800" fill="#f8fafc">KRAFTWERK</text>
+  <text x="76" y="47" font-family="Arial,sans-serif" font-size="12" letter-spacing="3" fill="#f97316">AUTO SERVICE</text>
+</svg>
