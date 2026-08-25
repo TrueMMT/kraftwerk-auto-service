@@ -1,0 +1,26 @@
+# Render Static Site redirects
+/                /index.html            200
+/startseite      /index.html            200
+/home            /index.html            200
+
+/leistungen      /leistungen.html       200
+/sluzby          /leistungen.html       200
+/services        /leistungen.html       200
+
+/preise          /preise.html           200
+/ceny            /preise.html           200
+/prices          /preise.html           200
+
+/ueber-uns       /ueber-uns.html        200
+/o-nas           /ueber-uns.html        200
+/about           /ueber-uns.html        200
+
+/kontakt         /kontakt.html          200
+/contact         /kontakt.html          200
+
+/termin          /termin.html           200
+/appointment     /termin.html           200
+
+/login           /login.html            200
+/register        /register.html         200
+/registrieren    /register.html         200

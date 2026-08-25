@@ -1,20 +1,13 @@
-KRAFTWERK AUTO v25 STABLE
+KRAFTWERK AUTO v26 - RENDER READY
 
-This build removes all previous repaint/cache/mask hacks.
+Fixes:
+- one valid car asset: /assets/sports-car.png
+- one CSS path: /css/style.css
+- one JS path: /js/app.js
+- all internal links use absolute Render-root paths
+- stale v24/v25 asset references removed
+- _redirects added for /preise, /ceny, /leistungen, /sluzby, etc.
 
-Hero:
-- one clean CSS implementation only
-- real transparent PNG car
-- no CSS masks
-- no filter chain
-- no JS repaint
-- no redirect
-- no animated compositor layers
-- static red atmosphere and glow lines only
-
-Fresh files:
-css/style-v25.css
-js/app-v25.js
-assets/sports-car-v25.png
-
-Upload the CONTENTS to the repository root.
+UPLOAD:
+Replace the repository contents with the CONTENTS of this ZIP.
+Render Auto-Deploy will then deploy the corrected version.
