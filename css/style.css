@@ -1199,3 +1199,126 @@ footer *{
     transform:translateX(-5%) scale(1.06) !important;
   }
 }
+
+
+/* =========================================================
+   v19 — MATCH THE GOOD TOP VERSION
+   Remove grey blocks, restore deep black/red cinematic hero
+   ========================================================= */
+
+.hero{
+  background:
+    radial-gradient(ellipse at 78% 42%,rgba(255,45,10,.22),transparent 31%),
+    radial-gradient(ellipse at 92% 62%,rgba(255,20,0,.16),transparent 25%),
+    linear-gradient(90deg,#030506 0%,#050708 42%,#070809 100%) !important;
+}
+
+/* Make the whole hero read as one scene, not separate rectangles */
+.hero .container.hero-grid{
+  background:transparent !important;
+  box-shadow:none !important;
+  border:0 !important;
+}
+
+/* Kill any grey panel effect behind text */
+.hero-grid > div:first-child{
+  background:transparent !important;
+  box-shadow:none !important;
+  border:0 !important;
+}
+
+/* Car area: no panel, no box, no grey background */
+.hero-media{
+  background:transparent !important;
+  box-shadow:none !important;
+  border:0 !important;
+  overflow:visible !important;
+}
+
+/* Blend existing car image into the hero instead of showing its rectangular background */
+.hero-car{
+  width:132% !important;
+  max-width:none !important;
+  transform:translateX(-6%) scale(1.08) !important;
+  filter:
+    contrast(1.18)
+    saturate(1.28)
+    brightness(.86)
+    drop-shadow(0 22px 28px rgba(0,0,0,.62))
+    drop-shadow(0 0 26px rgba(255,45,10,.22)) !important;
+
+  -webkit-mask-image:
+    linear-gradient(90deg,transparent 0%,rgba(0,0,0,.48) 11%,#000 25%,#000 88%,transparent 100%),
+    linear-gradient(180deg,transparent 0%,#000 12%,#000 86%,transparent 100%) !important;
+  mask-image:
+    linear-gradient(90deg,transparent 0%,rgba(0,0,0,.48) 11%,#000 25%,#000 88%,transparent 100%),
+    linear-gradient(180deg,transparent 0%,#000 12%,#000 86%,transparent 100%) !important;
+  -webkit-mask-composite:source-in !important;
+  mask-composite:intersect !important;
+}
+
+/* Stronger cinematic red atmosphere, like the upper reference */
+.hero::before{
+  background:
+    radial-gradient(circle at 73% 39%,rgba(255,38,5,.24),transparent 26%),
+    radial-gradient(circle at 86% 48%,rgba(255,65,18,.17),transparent 31%),
+    linear-gradient(170deg,transparent 0 56%,rgba(255,60,15,.14) 56.2%,transparent 56.6%),
+    linear-gradient(176deg,transparent 0 64%,rgba(255,82,23,.09) 64.2%,transparent 64.55%) !important;
+}
+
+/* Visible embers without washing out the colors */
+.hero::after{
+  opacity:.82 !important;
+  background-image:
+    radial-gradient(circle,rgba(255,79,25,.90) 0 1.1px,transparent 1.9px),
+    radial-gradient(circle,rgba(255,38,8,.72) 0 .9px,transparent 1.7px) !important;
+  background-size:108px 108px,163px 163px !important;
+}
+
+/* Keep text bright and punchy */
+.hero h1{
+  color:#f3f3f0 !important;
+  text-shadow:0 2px 22px rgba(0,0,0,.35);
+}
+.hero h1 span{
+  color:#ff4a1f !important;
+  text-shadow:0 0 22px rgba(255,65,20,.12);
+}
+.hero-copy{
+  color:#d1d5d7 !important;
+}
+
+/* Keep neon lines, slightly cleaner */
+.hero .glow-line-top,
+.hero .glow-line-bottom{
+  background:#ff3b12 !important;
+  box-shadow:
+    0 0 5px #ff3b12,
+    0 0 14px rgba(255,55,12,.88),
+    0 0 28px rgba(255,45,8,.48) !important;
+}
+
+/* Desktop balance similar to the upper screenshot */
+@media(min-width:1001px){
+  .hero .container.hero-grid{
+    grid-template-columns:minmax(480px,.88fr) minmax(650px,1.12fr) !important;
+    gap:8px !important;
+  }
+  .hero-media{
+    height:540px !important;
+    min-height:540px !important;
+  }
+}
+
+/* Prevent any inherited background strips from previous versions */
+.hero *,
+.hero .container *,
+.hero-grid *{
+  background-color:transparent;
+}
+.hero .btn,
+.hero input,
+.hero select,
+.hero textarea{
+  background-color:initial;
+}
