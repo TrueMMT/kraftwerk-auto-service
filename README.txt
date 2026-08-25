@@ -61,3 +61,12 @@ V18:
 - Kept static red ember effects and both glow lines.
 - Hero text and car remain real DOM elements and render immediately.
 - Cache-busting updated to v18.0.
+
+V20:
+- Permanent cache-busting uses NEW FILENAMES, not only ?v query parameters.
+- style.css -> style-v20.css
+- app.js -> app-v20.js
+- sports-car-v12.png -> sports-car-v20.png
+- All HTML pages point directly to the new filenames.
+- Old versioned files removed from this package.
+- No visual design changes from v19.
