@@ -1,1 +1,59 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Leistungen | KRAFTWERK AUTO</title><link rel="stylesheet" href="styles.css"></head><body><header><div class="wrap nav"><a class="brand" href="index.html">KRAFTWERK <b>AUTO</b></a><nav class="links"><a href="index.html">Startseite</a><a href="leistungen.html">Leistungen</a><a href="preise.html">Preise</a><a href="ueber-uns.html">Über uns</a><a href="kontakt.html">Kontakt</a></nav><div class="auth"><button class="btn login">Login</button><button class="btn primary register">Registrieren</button></div></div></header><main><section class="pagehero"><div class="wrap"><div class="tag">LEISTUNGEN</div><h1>Werkstattservice ohne Umwege.</h1></div></section><section class="wrap section"><div class="grid"><div class="card"><h3>Inspektion & Ölservice</h3><p>Wartung nach Herstellervorgaben.</p></div><div class="card"><h3>HU/AU Vorbereitung</h3><p>Vorabcheck für Haupt- und Abgasuntersuchung.</p></div><div class="card"><h3>Bremsenservice</h3><p>Scheiben, Beläge und Bremsflüssigkeit.</p></div><div class="card"><h3>Reifenservice</h3><p>Montage, Wechsel und Auswuchten.</p></div><div class="card"><h3>Achsvermessung</h3><p>Präzise Fahrwerksgeometrie.</p></div><div class="card"><h3>Klimaservice</h3><p>Prüfung, Wartung und Desinfektion.</p></div><div class="card"><h3>Diagnose</h3><p>Elektronik und Fehlersuche.</p></div><div class="card"><h3>Motor & Getriebe</h3><p>Prüfung und Reparatur nach Befund.</p></div><div class="card"><h3>Fahrwerk</h3><p>Stoßdämpfer, Federn und Lager.</p></div></div></section></main><footer><div class="wrap foot"><b>KRAFTWERK AUTO</b><span>Portfolio-Demo · Fiktiver Kfz-Betrieb · Deutschland</span><span>© 2026</span></div></footer><div class="modal" id="auth"><div class="box"><span class="close">✕</span><h2 id="mtitle">Kundenkonto</h2><input placeholder="E-Mail"><input type="password" placeholder="Passwort"><button class="btn primary full" id="submitAuth">Weiter</button><p class="muted">Demo-Funktion – kein echtes Kundenkonto.</p></div></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="KRAFTWERK AUTO – moderne Portfolio-Demo-Website für einen deutschen Kfz-Meisterbetrieb.">
+<title>Leistungen | KRAFTWERK AUTO</title>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="logo" href="index.html"><span class="logo-mark"></span>KRAFTWERK <span>AUTO</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html" class="active">Leistungen</a>
+      <a href="preise.html">Preise</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="auth-actions">
+      <button class="btn login" data-auth="login">Login</button>
+      <button class="btn primary register" data-auth="register">Registrieren</button>
+    </div>
+    <button class="menu-btn" aria-label="Menü">☰</button>
+  </div>
+</header>
+
+
+<main>
+<section class="page-hero"><div class="container"><div class="crumb">Startseite / Leistungen</div><div class="kicker">Werkstattservice</div><h1>Technik, Wartung und Reparatur aus einer Hand.</h1><p>Ein übersichtliches Leistungsspektrum für einen modernen Kfz-Betrieb – jede Kategorie als eigene, klar verständliche Leistung.</p></div></section>
+<section class="section container"><div class="content-grid"><div class="info-card reveal"><div class="kicker">Werkstatt</div><h3>Inspektion & Ölservice</h3><p>Wartung nach Herstellervorgaben, Öl- und Filterwechsel sowie dokumentierter Fahrzeugcheck.</p></div><div class="info-card reveal"><div class="kicker">Werkstatt</div><h3>HU/AU Vorbereitung</h3><p>Technischer Vorabcheck und Vorbereitung auf Haupt- und Abgasuntersuchung.</p></div><div class="info-card reveal"><div class="kicker">Werkstatt</div><h3>Bremsenservice</h3><p>Prüfung und Austausch von Belägen, Scheiben und Bremsflüssigkeit.</p></div><div class="info-card reveal"><div class="kicker">Werkstatt</div><h3>Reifenservice</h3><p>Räderwechsel, Montage, Auswuchten, Reifenkontrolle und Einlagerungsoption als Kundendienst.</p></div><div class="info-card reveal"><div class="kicker">Werkstatt</div><h3>Achsvermessung</h3><p>Präzise Vermessung und Einstellung für sauberen Geradeauslauf und gleichmäßigen Reifenverschleiß.</p></div><div class="info-card reveal"><div class="kicker">Werkstatt</div><h3>Klimaservice</h3><p>Funktionsprüfung, Wartung, Desinfektion und Befüllung nach Fahrzeugvorgabe.</p></div><div class="info-card reveal"><div class="kicker">Werkstatt</div><h3>Diagnose & Elektronik</h3><p>Fehlerspeicher, Steuergeräte, Sensorik und strukturierte elektronische Fehlersuche.</p></div><div class="info-card reveal"><div class="kicker">Werkstatt</div><h3>Motor & Getriebe</h3><p>Prüfung, Wartung und Reparaturarbeiten nach Diagnose und Kundenfreigabe.</p></div><div class="info-card reveal"><div class="kicker">Werkstatt</div><h3>Fahrwerk & Lenkung</h3><p>Stoßdämpfer, Federn, Lager, Querlenker und sicherheitsrelevante Fahrwerkskomponenten.</p></div></div></section>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><strong>KRAFTWERK AUTO</strong><br><small>Portfolio-Demo · fiktiver Kfz-Meisterbetrieb</small></div>
+    <div>Deutschland · © 2026</div>
+  </div>
+</footer>
+
+
+<div class="modal" id="authModal">
+  <div class="modal-card">
+    <button class="modal-close">×</button>
+    <h3 id="modalTitle">Willkommen zurück</h3>
+    <p id="modalSub">Portfolio-Demo: Login ohne echtes Backend.</p>
+    <input type="email" placeholder="E-Mail-Adresse">
+    <input type="password" placeholder="Passwort">
+    <button class="btn primary" id="authSubmit">Weiter</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,1 +1,82 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kontakt | KRAFTWERK AUTO</title><link rel="stylesheet" href="styles.css"></head><body><header><div class="wrap nav"><a class="brand" href="index.html">KRAFTWERK <b>AUTO</b></a><nav class="links"><a href="index.html">Startseite</a><a href="leistungen.html">Leistungen</a><a href="preise.html">Preise</a><a href="ueber-uns.html">Über uns</a><a href="kontakt.html">Kontakt</a></nav><div class="auth"><button class="btn login">Login</button><button class="btn primary register">Registrieren</button></div></div></header><main><section class="pagehero"><div class="wrap"><div class="tag">TERMIN & KONTAKT</div><h1>Wann können wir helfen?</h1></div></section><section class="wrap section"><form class="form" id="booking"><input required placeholder="Vor- und Nachname"><input required type="email" placeholder="E-Mail"><input placeholder="Telefon"><input placeholder="Fahrzeug / Modell"><select><option>Service auswählen</option><option>Inspektion</option><option>Diagnose</option><option>Reifenservice</option></select><input type="date"><textarea placeholder="Nachricht / Problem beschreiben"></textarea><button class="btn primary full">Terminanfrage senden</button></form></section></main><footer><div class="wrap foot"><b>KRAFTWERK AUTO</b><span>Portfolio-Demo · Fiktiver Kfz-Betrieb · Deutschland</span><span>© 2026</span></div></footer><div class="modal" id="auth"><div class="box"><span class="close">✕</span><h2 id="mtitle">Kundenkonto</h2><input placeholder="E-Mail"><input type="password" placeholder="Passwort"><button class="btn primary full" id="submitAuth">Weiter</button><p class="muted">Demo-Funktion – kein echtes Kundenkonto.</p></div></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="KRAFTWERK AUTO – moderne Portfolio-Demo-Website für einen deutschen Kfz-Meisterbetrieb.">
+<title>Kontakt | KRAFTWERK AUTO</title>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="logo" href="index.html"><span class="logo-mark"></span>KRAFTWERK <span>AUTO</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="preise.html">Preise</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="kontakt.html" class="active">Kontakt</a>
+    </nav>
+    <div class="auth-actions">
+      <button class="btn login" data-auth="login">Login</button>
+      <button class="btn primary register" data-auth="register">Registrieren</button>
+    </div>
+    <button class="menu-btn" aria-label="Menü">☰</button>
+  </div>
+</header>
+
+
+<main>
+<section class="page-hero"><div class="container"><div class="crumb">Startseite / Kontakt</div><div class="kicker">Termin & Kontakt</div><h1>Erzähl uns kurz, was dein Auto braucht.</h1><p>In dieser Portfolio-Version ist das Formular eine Demo. Bei einem echten Kunden kann es direkt per E-Mail, CRM oder Werkstattsoftware verarbeitet werden.</p></div></section>
+<section class="section container">
+  <div class="contact-layout">
+    <aside class="contact-card reveal">
+      <h3>KRAFTWERK AUTO</h3>
+      <p class="section-sub">Fiktive Kontaktdaten für das Portfolio-Demo.</p>
+      <div class="contact-line"><small>Telefon</small><strong>+49 000 1234567</strong></div>
+      <div class="contact-line"><small>E-Mail</small><strong>service@kraftwerk-demo.de</strong></div>
+      <div class="contact-line"><small>Öffnungszeiten</small><strong>Mo–Fr · 08:00–18:00</strong></div>
+      <div class="contact-line"><small>Standort</small><strong>Deutschland · Demo-Adresse</strong></div>
+    </aside>
+    <div class="contact-card reveal">
+      <form class="form" id="bookingForm">
+        <div class="field"><label>Name</label><input required placeholder="Max Mustermann"></div>
+        <div class="field"><label>E-Mail</label><input required type="email" placeholder="max@beispiel.de"></div>
+        <div class="field"><label>Telefon</label><input placeholder="+49 ..."></div>
+        <div class="field"><label>Fahrzeug</label><input placeholder="z. B. BMW 320d"></div>
+        <div class="field"><label>Leistung</label><select><option>Bitte auswählen</option><option>Inspektion</option><option>Diagnose</option><option>Reifenservice</option><option>Bremsen</option><option>Klimaservice</option></select></div>
+        <div class="field"><label>Wunschtermin</label><input type="date"></div>
+        <div class="field full"><label>Nachricht</label><textarea placeholder="Beschreibe kurz das Anliegen ..."></textarea></div>
+        <div class="field full"><button class="btn primary" type="submit">Terminanfrage senden →</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><strong>KRAFTWERK AUTO</strong><br><small>Portfolio-Demo · fiktiver Kfz-Meisterbetrieb</small></div>
+    <div>Deutschland · © 2026</div>
+  </div>
+</footer>
+
+
+<div class="modal" id="authModal">
+  <div class="modal-card">
+    <button class="modal-close">×</button>
+    <h3 id="modalTitle">Willkommen zurück</h3>
+    <p id="modalSub">Portfolio-Demo: Login ohne echtes Backend.</p>
+    <input type="email" placeholder="E-Mail-Adresse">
+    <input type="password" placeholder="Passwort">
+    <button class="btn primary" id="authSubmit">Weiter</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

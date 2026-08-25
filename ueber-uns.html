@@ -1,1 +1,74 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Über uns | KRAFTWERK AUTO</title><link rel="stylesheet" href="styles.css"></head><body><header><div class="wrap nav"><a class="brand" href="index.html">KRAFTWERK <b>AUTO</b></a><nav class="links"><a href="index.html">Startseite</a><a href="leistungen.html">Leistungen</a><a href="preise.html">Preise</a><a href="ueber-uns.html">Über uns</a><a href="kontakt.html">Kontakt</a></nav><div class="auth"><button class="btn login">Login</button><button class="btn primary register">Registrieren</button></div></div></header><main><section class="pagehero"><div class="wrap"><div class="tag">ÜBER UNS</div><h1>Werkstattkultur neu gedacht.</h1><p class="lead">KRAFTWERK AUTO ist eine fiktive Portfolio-Marke für einen modernen deutschen Kfz-Betrieb.</p></div></section><section class="wrap section"><div class="grid"><div class="card"><h3>Transparenz</h3><p>Keine Reparatur ohne Freigabe.</p></div><div class="card"><h3>Qualität</h3><p>Strukturierte Prozesse und hoher Anspruch.</p></div><div class="card"><h3>Tempo</h3><p>Digitale Terminaufnahme und kurze Wege.</p></div></div></section></main><footer><div class="wrap foot"><b>KRAFTWERK AUTO</b><span>Portfolio-Demo · Fiktiver Kfz-Betrieb · Deutschland</span><span>© 2026</span></div></footer><div class="modal" id="auth"><div class="box"><span class="close">✕</span><h2 id="mtitle">Kundenkonto</h2><input placeholder="E-Mail"><input type="password" placeholder="Passwort"><button class="btn primary full" id="submitAuth">Weiter</button><p class="muted">Demo-Funktion – kein echtes Kundenkonto.</p></div></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="KRAFTWERK AUTO – moderne Portfolio-Demo-Website für einen deutschen Kfz-Meisterbetrieb.">
+<title>Über uns | KRAFTWERK AUTO</title>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="logo" href="index.html"><span class="logo-mark"></span>KRAFTWERK <span>AUTO</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="preise.html">Preise</a>
+      <a href="ueber-uns.html" class="active">Über uns</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="auth-actions">
+      <button class="btn login" data-auth="login">Login</button>
+      <button class="btn primary register" data-auth="register">Registrieren</button>
+    </div>
+    <button class="menu-btn" aria-label="Menü">☰</button>
+  </div>
+</header>
+
+
+<main>
+<section class="page-hero"><div class="container"><div class="crumb">Startseite / Über uns</div><div class="kicker">KRAFTWERK AUTO</div><h1>Werkstattkultur, die modern gedacht ist.</h1><p>KRAFTWERK AUTO ist eine fiktive Portfolio-Marke. Die Seite zeigt, wie ein Kfz-Betrieb hochwertig, klar und kundenorientiert präsentiert werden kann.</p></div></section>
+<section class="section container">
+  <div class="split">
+    <div class="photo-card reveal"></div>
+    <div class="reveal">
+      <div class="kicker">Unser Anspruch</div>
+      <h2>Vertrauen entsteht durch Klarheit.</h2>
+      <p class="section-sub">Der Kunde soll jederzeit verstehen, was gemacht wird, warum es gemacht wird und welche Kosten entstehen. Genau darauf ist auch das digitale Erlebnis ausgelegt.</p>
+      <div class="bullet-list">
+        <div class="bullet"><i>✓</i><span>Keine Zusatzarbeit ohne Freigabe</span></div>
+        <div class="bullet"><i>✓</i><span>Klare Kommunikation vor und nach dem Termin</span></div>
+        <div class="bullet"><i>✓</i><span>Moderne digitale Terminaufnahme</span></div>
+        <div class="bullet"><i>✓</i><span>Professioneller Auftritt auf Desktop und Mobil</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><strong>KRAFTWERK AUTO</strong><br><small>Portfolio-Demo · fiktiver Kfz-Meisterbetrieb</small></div>
+    <div>Deutschland · © 2026</div>
+  </div>
+</footer>
+
+
+<div class="modal" id="authModal">
+  <div class="modal-card">
+    <button class="modal-close">×</button>
+    <h3 id="modalTitle">Willkommen zurück</h3>
+    <p id="modalSub">Portfolio-Demo: Login ohne echtes Backend.</p>
+    <input type="email" placeholder="E-Mail-Adresse">
+    <input type="password" placeholder="Passwort">
+    <button class="btn primary" id="authSubmit">Weiter</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
