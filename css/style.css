@@ -863,3 +863,162 @@ header .container{
 .hero{
   contain:paint;
 }
+
+
+/* =========================================================
+   v16 — DEFINITIVE HERO RENDER FIX
+   Real IMG element, no pseudo-element car rendering
+   ========================================================= */
+
+.hero{
+  position:relative !important;
+  display:block !important;
+  isolation:isolate !important;
+  contain:none !important;
+  content-visibility:visible !important;
+  overflow:hidden !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  min-height:620px !important;
+}
+
+.hero .container.hero-grid{
+  display:grid !important;
+  grid-template-columns:minmax(0,.93fr) minmax(0,1.07fr) !important;
+  align-items:center !important;
+  gap:20px !important;
+  min-height:520px !important;
+  position:relative !important;
+  z-index:10 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+  contain:none !important;
+}
+
+/* Text is always a normal painted layer */
+.hero-grid > div:first-child{
+  position:relative !important;
+  z-index:12 !important;
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+
+/* Stop ALL older pseudo-element car versions */
+.hero-media:before,
+.hero-media:after{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+}
+
+/* Real image container */
+.hero-media{
+  position:relative !important;
+  z-index:11 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  height:520px !important;
+  min-height:520px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  contain:none !important;
+}
+
+/* Real car image: stable in every viewport */
+.hero-car{
+  display:block !important;
+  position:relative !important;
+  z-index:2 !important;
+  width:118% !important;
+  max-width:none !important;
+  height:auto !important;
+  object-fit:contain !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:translateX(-3%) scale(1.08) !important;
+  filter:
+    contrast(1.08)
+    saturate(1.10)
+    brightness(.98)
+    drop-shadow(0 24px 30px rgba(0,0,0,.58))
+    drop-shadow(0 0 22px rgba(255,55,15,.18)) !important;
+  pointer-events:none !important;
+}
+
+/* Decorative hero backgrounds stay below real content */
+.hero:before,
+.hero:after{
+  z-index:0 !important;
+}
+
+/* Glow lines stay visible but never block rendering */
+.hero .glow-line-top,
+.hero .glow-line-bottom{
+  z-index:25 !important;
+}
+
+/* Spark layer below text/car */
+.spark-layer{
+  z-index:4 !important;
+}
+
+/* Remove the risky blanket animation-fill rule effect on hero content */
+.hero .container,
+.hero .hero-grid,
+.hero .hero-grid > div:first-child,
+.hero .hero-media,
+.hero .hero-car{
+  animation:none !important;
+  transition:none !important;
+}
+
+/* Desktop/fullscreen */
+@media(min-width:1001px){
+  .hero .container.hero-grid{
+    grid-template-columns:minmax(500px,.95fr) minmax(580px,1.05fr) !important;
+  }
+  .hero-car{
+    width:125% !important;
+    transform:translateX(-5%) scale(1.08) !important;
+  }
+}
+
+/* Tablet */
+@media(max-width:1000px){
+  .hero .container.hero-grid{
+    grid-template-columns:1fr !important;
+    min-height:auto !important;
+  }
+  .hero-media{
+    height:330px !important;
+    min-height:330px !important;
+  }
+  .hero-car{
+    width:min(850px,118%) !important;
+    transform:translateX(0) scale(1.02) !important;
+  }
+}
+
+/* Mobile */
+@media(max-width:650px){
+  .hero{
+    min-height:auto !important;
+  }
+  .hero-media{
+    height:250px !important;
+    min-height:250px !important;
+  }
+  .hero-car{
+    width:125% !important;
+  }
+}

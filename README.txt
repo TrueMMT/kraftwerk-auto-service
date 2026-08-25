@@ -39,3 +39,10 @@ V15:
 - Text and car are forced above decorative layers immediately.
 - Glow lines and spark animations remain.
 - No visual redesign; only loading/stacking stability changes.
+
+V16:
+- Definitive fullscreen hero rendering fix.
+- Car is now a real <img> element, not ::before.
+- Removed paint containment conflict.
+- Text and car render immediately at all viewport sizes.
+- Existing glow lines and spark effects kept.
