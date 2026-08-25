@@ -1,13 +1,15 @@
-KRAFTWERK AUTO v23 - AUTOMATIC CACHE FIX
+KRAFTWERK AUTO v24 - CHROME REPAINT FIX
 
-What changed:
-- No visual redesign.
-- First page open automatically adds ?build=23 to the URL.
-- This forces Chrome/GitHub Pages to fetch the current HTML instead of a stale cached document.
-- Existing query parameters such as utm_source are preserved.
-- Internal navigation carries build=23 automatically.
-- CSS, JS and car image use fresh v23 filenames.
+This version targets the exact issue where the hero appears only after
+switching tabs/windows or pressing Ctrl+F5.
 
-IMPORTANT:
-Upload ALL contents of this ZIP to the repository root.
-After v23 has been uploaded, normal visitors should not need Ctrl+F5.
+Changes:
+- Removed v23 double-load redirect.
+- Preloads the hero car image.
+- JavaScript is deferred.
+- After the hero image is decoded/loaded, the page automatically forces
+  a Chrome repaint, mimicking what happens when you switch tabs.
+- A second repaint runs after window.load as a fallback.
+- No intended visual redesign.
+
+Upload ALL contents to the GitHub repository root.
