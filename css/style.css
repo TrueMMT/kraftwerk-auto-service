@@ -782,3 +782,84 @@ header .container{
   from{transform:translateX(0)}
   to{transform:translateX(565%)}
 }
+
+
+/* =========================================================
+   v15 — HERO FIRST-LOAD VISIBILITY FIX
+   ========================================================= */
+
+/* Create a predictable stacking context */
+.hero{
+  position:relative !important;
+  isolation:isolate !important;
+  overflow:hidden !important;
+}
+
+/* Decorative layers always stay behind content */
+.hero:before,
+.hero:after{
+  z-index:0 !important;
+  pointer-events:none !important;
+}
+
+/* Main hero content always above effects */
+.hero .container,
+.hero-grid{
+  position:relative !important;
+  z-index:10 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+
+/* Text column */
+.hero-grid > div:first-child{
+  position:relative !important;
+  z-index:12 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* Car column */
+.hero-media{
+  position:relative !important;
+  z-index:11 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.hero-media:before{
+  z-index:1 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* Neon lines above hero content, but they are tiny/non-blocking */
+.hero .glow-line-top,
+.hero .glow-line-bottom{
+  z-index:30 !important;
+  pointer-events:none !important;
+}
+
+/* Spark layer should never cover or hide the content */
+.spark-layer{
+  z-index:3 !important;
+  pointer-events:none !important;
+}
+
+/* Remove any accidental first-load animation/hiding state */
+.hero *,
+.hero .container *,
+.hero-grid *{
+  animation-fill-mode:both;
+}
+.hero .container,
+.hero-grid,
+.hero-grid > div:first-child,
+.hero-media{
+  transition:none !important;
+}
+
+/* Ensure browser paints hero immediately */
+.hero{
+  contain:paint;
+}

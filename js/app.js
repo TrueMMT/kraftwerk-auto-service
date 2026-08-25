@@ -30,3 +30,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   hero.appendChild(layer);
 });
+
+
+// v15: force hero visible immediately on first paint / bfcache restore
+(function(){
+  const forceHeroVisible = () => {
+    const hero = document.querySelector(".hero");
+    if (!hero) return;
+    hero.style.visibility = "visible";
+    hero.style.opacity = "1";
+    const grid = hero.querySelector(".hero-grid");
+    if (grid) {
+      grid.style.visibility = "visible";
+      grid.style.opacity = "1";
+      grid.style.transform = "none";
+    }
+    const media = hero.querySelector(".hero-media");
+    if (media) {
+      media.style.visibility = "visible";
+      media.style.opacity = "1";
+      media.style.transform = "none";
+    }
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", forceHeroVisible, {once:true});
+  } else {
+    forceHeroVisible();
+  }
+
+  window.addEventListener("pageshow", forceHeroVisible);
+})();

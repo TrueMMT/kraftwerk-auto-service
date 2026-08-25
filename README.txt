@@ -33,3 +33,9 @@ V12:
 - No new image was generated.
 - Transparent fade was baked into the PNG so there is no visible rectangular frame.
 - Existing site layout, header, effects and subpages were left unchanged.
+
+V15:
+- Fixed hero first-load rendering issue.
+- Text and car are forced above decorative layers immediately.
+- Glow lines and spark animations remain.
+- No visual redesign; only loading/stacking stability changes.
