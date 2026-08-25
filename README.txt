@@ -53,3 +53,11 @@ V17:
 - Hero remains visible without JavaScript.
 - Added build-version meta tag for deployment verification.
 - No design changes.
+
+V18:
+- Fixed Chrome first-tab repaint/GPU compositing issue.
+- Removed heavy hero animation/filter/mask combinations.
+- Removed JS particle layer.
+- Kept static red ember effects and both glow lines.
+- Hero text and car remain real DOM elements and render immediately.
+- Cache-busting updated to v18.0.

@@ -13,22 +13,3 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 
-// v11 lightweight animated sparks (CSS/DOM only)
-document.addEventListener("DOMContentLoaded", () => {
-  const hero = document.querySelector(".hero");
-  if (!hero || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const layer = document.createElement("div");
-  layer.className = "spark-layer";
-  for (let i = 0; i < 24; i++) {
-    const s = document.createElement("i");
-    s.style.left = (Math.random()*100) + "%";
-    s.style.top = (20 + Math.random()*75) + "%";
-    s.style.animationDelay = (-Math.random()*7) + "s";
-    s.style.animationDuration = (3.8 + Math.random()*4.8) + "s";
-    s.style.opacity = (.25 + Math.random()*.7);
-    layer.appendChild(s);
-  }
-  hero.appendChild(layer);
-});
-
-
