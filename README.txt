@@ -1,15 +1,20 @@
-KRAFTWERK AUTO v24 - CHROME REPAINT FIX
+KRAFTWERK AUTO v25 STABLE
 
-This version targets the exact issue where the hero appears only after
-switching tabs/windows or pressing Ctrl+F5.
+This build removes all previous repaint/cache/mask hacks.
 
-Changes:
-- Removed v23 double-load redirect.
-- Preloads the hero car image.
-- JavaScript is deferred.
-- After the hero image is decoded/loaded, the page automatically forces
-  a Chrome repaint, mimicking what happens when you switch tabs.
-- A second repaint runs after window.load as a fallback.
-- No intended visual redesign.
+Hero:
+- one clean CSS implementation only
+- real transparent PNG car
+- no CSS masks
+- no filter chain
+- no JS repaint
+- no redirect
+- no animated compositor layers
+- static red atmosphere and glow lines only
 
-Upload ALL contents to the GitHub repository root.
+Fresh files:
+css/style-v25.css
+js/app-v25.js
+assets/sports-car-v25.png
+
+Upload the CONTENTS to the repository root.
