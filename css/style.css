@@ -718,3 +718,67 @@ header .container{
 @media(prefers-reduced-motion:reduce){
   .hero .glow-line-top:after,.hero .glow-line-bottom:after{animation:none}
 }
+
+
+/* v14 — FORCE VISIBLE NEON HERO LINES */
+.hero .glow-line-top,
+.hero .glow-line-bottom{
+  display:block !important;
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  width:100vw !important;
+  margin-left:calc(50% - 50vw) !important;
+  height:4px !important;
+  z-index:999 !important;
+  opacity:1 !important;
+  pointer-events:none !important;
+  background:linear-gradient(90deg,
+    rgba(255,40,8,.15) 0%,
+    #ff2e08 8%,
+    #ff6a30 45%,
+    #ffb08a 50%,
+    #ff6a30 55%,
+    #ff2e08 92%,
+    rgba(255,40,8,.15) 100%) !important;
+  box-shadow:
+    0 0 5px #ff3a0b,
+    0 0 12px #ff3a0b,
+    0 0 24px rgba(255,55,10,.85),
+    0 0 45px rgba(255,40,5,.55) !important;
+}
+.hero .glow-line-top{
+  top:18px !important;
+}
+.hero .glow-line-bottom{
+  bottom:18px !important;
+}
+.hero .glow-line-top:before,
+.hero .glow-line-bottom:before{
+  content:"" !important;
+  position:absolute !important;
+  inset:-5px 0 !important;
+  background:linear-gradient(90deg,transparent,rgba(255,55,10,.18),rgba(255,85,35,.35),rgba(255,55,10,.18),transparent) !important;
+  filter:blur(6px) !important;
+}
+.hero .glow-line-top:after,
+.hero .glow-line-bottom:after{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  top:-2px !important;
+  left:-24% !important;
+  width:22% !important;
+  height:8px !important;
+  border-radius:99px !important;
+  background:linear-gradient(90deg,transparent,#ff5b24,#fff3ec,#ff5b24,transparent) !important;
+  box-shadow:0 0 18px #ff4b18 !important;
+  animation:v14LineSweep 4s linear infinite !important;
+}
+.hero .glow-line-bottom:after{
+  animation-delay:-2s !important;
+}
+@keyframes v14LineSweep{
+  from{transform:translateX(0)}
+  to{transform:translateX(565%)}
+}
