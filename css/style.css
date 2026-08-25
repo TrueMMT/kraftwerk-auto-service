@@ -1022,3 +1022,35 @@ header .container{
     width:125% !important;
   }
 }
+
+
+/* =========================================================
+   v17 — CACHE + NO-JS HERO SAFETY
+   ========================================================= */
+html,body{
+  min-height:100%;
+}
+.hero,
+.hero .container.hero-grid,
+.hero-grid > div:first-child,
+.hero-media,
+.hero-car{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.hero .container.hero-grid{
+  display:grid !important;
+}
+.hero-car{
+  display:block !important;
+}
+
+/* Hero content must never depend on JS-added classes. */
+html:not(.js) .hero,
+html:not(.js) .hero-grid,
+html:not(.js) .hero-media,
+html:not(.js) .hero-car{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}

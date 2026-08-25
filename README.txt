@@ -46,3 +46,10 @@ V16:
 - Removed paint containment conflict.
 - Text and car render immediately at all viewport sizes.
 - Existing glow lines and spark effects kept.
+
+V17:
+- Added cache-busting ?v=17.0 to CSS, JS and hero car asset.
+- Added no-cache HTML meta tags.
+- Hero remains visible without JavaScript.
+- Added build-version meta tag for deployment verification.
+- No design changes.
