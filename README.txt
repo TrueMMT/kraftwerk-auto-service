@@ -18,3 +18,11 @@ V10 CHANGES
 - Road/light streaks visually continue behind the text.
 - Stronger visible red/orange sparks and cinematic effects.
 - No generated replacement image was used for this revision.
+
+V11:
+- Much smaller/cleaner top navigation.
+- Header spacing tightened.
+- Car asset is seamlessly masked/cropped, no visible rectangle/card.
+- Existing car made visually more aggressive through crop/contrast/saturation (no new image generated).
+- Animated red sparks, glow and road/light streak effects added with CSS/JS.
+- Effects extend behind the hero text.

@@ -363,3 +363,240 @@ header .container{
       url("../assets/porsche-hero.png") 70% 78% / auto 58% no-repeat;
   }
 }
+
+
+/* =========================================================
+   KRAFTWERK AUTO v11 — compact header + seamless sport hero
+   ========================================================= */
+
+/* Compact, cleaner header */
+header{
+  height:76px !important;
+  background:rgba(4,6,7,.86);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.045);
+}
+header .container{
+  width:min(1380px,calc(100% - 72px)) !important;
+}
+.nav{
+  height:76px;
+  gap:16px !important;
+}
+.brand{
+  gap:10px !important;
+  margin-right:24px !important;
+  font-size:18px !important;
+  letter-spacing:1.7px !important;
+}
+.brand-badge{
+  width:35px !important;
+  height:35px !important;
+  border-radius:8px !important;
+  font-size:17px !important;
+  box-shadow:0 7px 20px rgba(255,74,31,.24) !important;
+}
+.brand-copy small{
+  margin-top:5px !important;
+  font-size:7.5px !important;
+  letter-spacing:1.45px !important;
+  color:#777f84 !important;
+}
+.menu{
+  gap:25px !important;
+  margin-left:auto !important;
+}
+.menu a{
+  padding:28px 0 !important;
+  font-size:13px !important;
+}
+.menu a.active:after{
+  bottom:14px !important;
+}
+.actions{
+  margin-left:8px !important;
+  gap:8px !important;
+}
+.actions .btn{
+  padding:10px 15px !important;
+  min-height:40px;
+  font-size:13px !important;
+  border-radius:8px !important;
+}
+
+/* Seamless hero. No rectangular car card. */
+.hero{
+  min-height:620px;
+  padding:64px 0 54px !important;
+  overflow:hidden;
+  position:relative;
+  isolation:isolate;
+  background:#050708 !important;
+}
+.hero .container{
+  width:min(1320px,calc(100% - 64px)) !important;
+}
+.hero-grid{
+  min-height:500px !important;
+  grid-template-columns:.93fr 1.07fr !important;
+  gap:8px !important;
+  align-items:center;
+}
+.hero-grid > div:first-child{
+  z-index:5;
+  padding-left:0 !important;
+}
+.hero h1{
+  font-size:clamp(54px,5.4vw,78px) !important;
+  margin:23px 0 20px !important;
+}
+.hero-copy{
+  max-width:600px;
+  font-size:16px !important;
+}
+.hero-media{
+  height:500px !important;
+  min-height:500px !important;
+  position:relative !important;
+  overflow:visible !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  border:0 !important;
+  filter:none !important;
+}
+
+/* Use the existing car asset only once, but crop/scale it harder so the car
+   reads as a sport/performance car and the original square edge disappears. */
+.hero-media:before{
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  z-index:1;
+  top:-86px !important;
+  right:-210px !important;
+  bottom:-100px !important;
+  left:-210px !important;
+  background-image:url("../assets/porsche-hero.png") !important;
+  background-repeat:no-repeat !important;
+  background-position:61% 52% !important;
+  background-size:cover !important;
+  filter:contrast(1.12) saturate(1.18) brightness(.94) !important;
+  -webkit-mask-image:
+    linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 12%,#000 33%,#000 88%,transparent 100%),
+    linear-gradient(180deg,transparent 0%,#000 14%,#000 84%,transparent 100%) !important;
+  mask-image:
+    linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 12%,#000 33%,#000 88%,transparent 100%),
+    linear-gradient(180deg,transparent 0%,#000 14%,#000 84%,transparent 100%) !important;
+  -webkit-mask-composite:source-in !important;
+  mask-composite:intersect !important;
+}
+
+/* Red light/road atmosphere continues behind both columns */
+.hero:before{
+  display:block !important;
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-15%;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 73% 45%,rgba(255,45,12,.25),transparent 29%),
+    radial-gradient(ellipse at 90% 58%,rgba(255,28,4,.18),transparent 25%),
+    radial-gradient(ellipse at 34% 82%,rgba(255,56,14,.08),transparent 31%),
+    linear-gradient(171deg,transparent 0 57%,rgba(255,66,18,.13) 57.15%,transparent 57.55%),
+    linear-gradient(175deg,transparent 0 64%,rgba(255,83,24,.11) 64.15%,transparent 64.5%),
+    linear-gradient(178deg,transparent 0 70%,rgba(255,52,12,.07) 70.1%,transparent 70.35%);
+  filter:drop-shadow(0 0 12px rgba(255,50,10,.32));
+  animation:roadGlow 7s ease-in-out infinite alternate;
+}
+
+/* Animated ember field, much more visible than before */
+.hero:after{
+  display:block !important;
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:-80px;
+  pointer-events:none;
+  opacity:.88;
+  background-image:
+    radial-gradient(circle,rgba(255,93,38,.95) 0 1.4px,transparent 2.2px),
+    radial-gradient(circle,rgba(255,47,12,.80) 0 1px,transparent 2px),
+    radial-gradient(circle,rgba(255,130,65,.65) 0 .8px,transparent 1.7px);
+  background-size:103px 103px,151px 151px,211px 211px;
+  background-position:0 0,42px 23px,71px 51px;
+  animation:embersDrift 13s linear infinite;
+  -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.5),#000 42%,#000);
+  mask-image:linear-gradient(90deg,rgba(0,0,0,.5),#000 42%,#000);
+}
+
+/* Extra moving light streaks behind text */
+.hero-grid > div:first-child:after{
+  content:"" !important;
+  position:absolute !important;
+  z-index:-1 !important;
+  left:-230px !important;
+  right:-760px !important;
+  bottom:4px !important;
+  height:220px !important;
+  pointer-events:none;
+  background:
+    linear-gradient(174deg,transparent 0 48%,rgba(255,62,16,.13) 48.25%,transparent 48.7%),
+    linear-gradient(177deg,transparent 0 62%,rgba(255,91,29,.10) 62.2%,transparent 62.6%);
+  animation:streakPulse 5.5s ease-in-out infinite alternate;
+}
+
+@keyframes embersDrift{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-70px,55px,0)}
+}
+@keyframes roadGlow{
+  from{opacity:.72;transform:scale(1)}
+  to{opacity:1;transform:scale(1.035)}
+}
+@keyframes streakPulse{
+  from{opacity:.45;transform:translateX(-18px)}
+  to{opacity:1;transform:translateX(24px)}
+}
+
+/* Respect reduced-motion accessibility */
+@media (prefers-reduced-motion:reduce){
+  .hero:before,.hero:after,.hero-grid > div:first-child:after{animation:none !important}
+}
+
+@media(max-width:1000px){
+  header{height:70px !important}
+  .nav{height:70px !important}
+  header .container{width:min(100% - 30px,1380px) !important}
+  .brand{margin-right:auto !important}
+  .hero-grid{grid-template-columns:1fr !important;min-height:650px !important}
+  .hero-media{height:300px !important;min-height:300px !important}
+  .hero-media:before{
+    left:-80px !important;right:-80px !important;top:-100px !important;bottom:-80px !important;
+    background-position:60% 52% !important;
+  }
+}
+@media(max-width:650px){
+  header .container{width:min(100% - 20px,1380px) !important}
+  .brand-copy small{display:none !important}
+  .brand{font-size:16px !important}
+  .hero .container{width:min(100% - 26px,1320px) !important}
+  .hero{padding-top:44px !important}
+  .hero h1{font-size:47px !important}
+}
+
+.spark-layer{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}
+.spark-layer i{
+  position:absolute;width:2px;height:11px;border-radius:99px;
+  background:linear-gradient(to top,transparent,#ff3d0b,#ffb08c);
+  box-shadow:0 0 8px #ff3d0b,0 0 15px rgba(255,61,11,.7);
+  transform:rotate(38deg);
+  animation:sparkFly linear infinite;
+}
+@keyframes sparkFly{
+  0%{transform:translate3d(0,80px,0) rotate(38deg) scale(.5);opacity:0}
+  15%{opacity:1}
+  100%{transform:translate3d(130px,-260px,0) rotate(38deg) scale(1.15);opacity:0}
+}
+@media(prefers-reduced-motion:reduce){.spark-layer{display:none}}
