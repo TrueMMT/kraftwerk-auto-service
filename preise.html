@@ -1,59 +1,30 @@
-<!doctype html>
-<html lang="de">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="KRAFTWERK AUTO – moderne Portfolio-Demo-Website für einen deutschen Kfz-Meisterbetrieb.">
-<title>Preise | KRAFTWERK AUTO</title>
-<link rel="preconnect" href="https://images.unsplash.com">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<header class="site-header">
-  <div class="container navbar">
-    <a class="logo" href="index.html"><span class="logo-mark"></span>KRAFTWERK <span>AUTO</span></a>
-    <nav class="nav-links">
-      <a href="index.html">Startseite</a>
-      <a href="leistungen.html">Leistungen</a>
-      <a href="preise.html" class="active">Preise</a>
-      <a href="ueber-uns.html">Über uns</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <div class="auth-actions">
-      <button class="btn login" data-auth="login">Login</button>
-      <button class="btn primary register" data-auth="register">Registrieren</button>
-    </div>
-    <button class="menu-btn" aria-label="Menü">☰</button>
-  </div>
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preise | KRAFTWERK AUTO</title><meta name="description" content="KRAFTWERK AUTO – moderner Autoservice">
+<link rel="stylesheet" href="./css/style.css"></head><body>
+<div class="topline"><div class="container"><span>+49 152 12345678 · info@kraftwerk-auto.de</span><span>Mo–Fr 08:00–18:00 · Sa 09:00–14:00</span></div></div>
+<header>
+ <div class="container nav">
+  <a class="brand" href="index.html"><span class="logo">K</span><span>KRAFTWERK <span>AUTO</span></span></a>
+  <nav class="menu">
+   <a data-page href="index.html">Startseite</a><a data-page href="leistungen.html">Leistungen</a>
+   <a data-page href="preise.html">Preise</a><a data-page href="ueber-uns.html">Über uns</a><a data-page href="kontakt.html">Kontakt</a>
+  </nav>
+  <div class="actions"><a class="btn" href="login.html">Login</a><a class="btn red" href="register.html">Registrieren</a></div>
+  <button class="btn mobile" type="button">☰</button>
+ </div>
 </header>
-
-
-<main>
-<section class="page-hero"><div class="container"><div class="crumb">Startseite / Preise</div><div class="kicker">Preisübersicht</div><h1>Klare Orientierung statt Überraschungen.</h1><p>Beispielpreise für dieses Portfolio-Demo. Bei einem echten Betrieb würden hier reale Preise, Paketangebote oder ein dynamischer Kostenvoranschlag erscheinen.</p></div></section>
-<section class="section container"><div class="price-list"><div class="price-row reveal"><div><strong>Ölservice</strong><small>Arbeitszeit zzgl. fahrzeugspezifisches Material</small></div><b>ab 89 €</b></div><div class="price-row reveal"><div><strong>Räderwechsel</strong><small>4 Räder, ohne Einlagerung</small></div><b>ab 39 €</b></div><div class="price-row reveal"><div><strong>Fahrzeugdiagnose</strong><small>Erstdiagnose / Fehlerspeicher</small></div><b>ab 49 €</b></div><div class="price-row reveal"><div><strong>Klimaservice</strong><small>Basis-Service, Material nach Bedarf</small></div><b>ab 79 €</b></div><div class="price-row reveal"><div><strong>Achsvermessung</strong><small>Vermessung, Einstellung je nach Fahrzeug</small></div><b>ab 99 €</b></div><div class="price-row reveal"><div><strong>Inspektion</strong><small>Nach Fahrzeug, Laufleistung und Herstellervorgabe</small></div><b>individuell</b></div><div class="price-row reveal"><div><strong>Bremsenservice</strong><small>Nach Bauteilen und Fahrzeugmodell</small></div><b>individuell</b></div></div></section>
-</main>
-
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <div><strong>KRAFTWERK AUTO</strong><br><small>Portfolio-Demo · fiktiver Kfz-Meisterbetrieb</small></div>
-    <div>Deutschland · © 2026</div>
-  </div>
-</footer>
-
-
-<div class="modal" id="authModal">
-  <div class="modal-card">
-    <button class="modal-close">×</button>
-    <h3 id="modalTitle">Willkommen zurück</h3>
-    <p id="modalSub">Portfolio-Demo: Login ohne echtes Backend.</p>
-    <input type="email" placeholder="E-Mail-Adresse">
-    <input type="password" placeholder="Passwort">
-    <button class="btn primary" id="authSubmit">Weiter</button>
-  </div>
-</div>
-
-<script src="app.js"></script>
-</body>
-</html>
+<main><section class="page-hero"><div class="container"><div class="breadcrumb">Startseite / Preise</div><h1>Klare Preise statt Überraschungen.</h1><p>Beispielpreise für diese Portfolio-Demo. Im realen Betrieb können Preise nach Fahrzeug, Material und Aufwand variieren.</p></div></section>
+<section class="section"><div class="container"><div class="pricing">
+<div class="price-card"><div><h3>Ölservice</h3><p>Arbeitszeit zzgl. fahrzeugspezifischem Öl und Material.</p></div><div class="price">ab 89 €</div></div>
+<div class="price-card"><div><h3>Radwechsel</h3><p>4 Räder, ohne Einlagerung.</p></div><div class="price">ab 39 €</div></div>
+<div class="price-card"><div><h3>Fahrzeugdiagnose</h3><p>Erstdiagnose und Auslesen des Fehlerspeichers.</p></div><div class="price">ab 49 €</div></div>
+<div class="price-card"><div><h3>Klimaservice</h3><p>Basis-Service, Material nach Bedarf.</p></div><div class="price">ab 79 €</div></div>
+<div class="price-card"><div><h3>Achsvermessung</h3><p>Messung und Einstellung je nach Fahrzeug.</p></div><div class="price">ab 99 €</div></div>
+<div class="price-card"><div><h3>Fahrzeugcheck</h3><p>Sicht- und Funktionsprüfung nach Umfang.</p></div><div class="price">individuell</div></div>
+<div class="price-card"><div><h3>Bremsenservice</h3><p>Preis abhängig von Komponenten und Fahrzeugmodell.</p></div><div class="price">individuell</div></div>
+<div class="price-card"><div><h3>Weitere Reparaturen</h3><p>Transparenter Kostenvoranschlag vor Arbeitsbeginn.</p></div><div class="price">auf Anfrage</div></div>
+</div></div></section></main>
+<footer><div class="container footer-grid">
+<div><strong>KRAFTWERK AUTO</strong><div>Demo-Portfolio · Deutschland · © 2026</div></div>
+<div><a href="leistungen.html">Leistungen</a> · <a href="preise.html">Preise</a> · <a href="kontakt.html">Kontakt</a></div>
+</div></footer><script src="./js/app.js"></script></body></html>
